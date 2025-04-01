@@ -25,12 +25,12 @@ T11, T04, CH 15, CH11 ,CH 12, T06, HW 06  `
   - Create a CRC card for each class that your project will implement.
   - See this link for a sample CRC card and a template to use for your own cards (you will have to make a copy to edit):
     [CRC Card Example](https://docs.google.com/document/d/1JE_3Qmytk_JGztRqkPXWACJwciPH61VCx3idIlBCVFY/edit?usp=sharing)
-  - Tables in markdown are not easy, so we suggest saving your CRC card as an image and including the image(s) in the 
-    README. You can do this by saving an image in the repository and linking to it. See the sample CRC card below - 
-    and REPLACE it with your own:
-  
-![Don't leave me in your README!](image/crc.png "Image of CRC card as an example. Upload your CRC card(s) in place of this one. ")
+  - Tables in markdown are not easy, so we suggest saving your CRC card as an image and including the image(s) in the
+    README. You can do this by saving an image in the repository and linking to it. See the sample CRC card below -
+    and REPLACE it with your own:\
 
+![Maze CRC](CRC%20Cards/Screenshot%202025-04-01%20185145.png " Maze CRC Card")
+![Mouse CRC](CRC%20Cards/Screenshot%202025-04-01%20185339.png " Mouse CRC Card")
 **Branches**: This project will **require** effective use of git. 
 
 Each partner should create a branch at the beginning of the project, and stay on this branch (or branches of their 
@@ -48,6 +48,8 @@ Throughout this project, you will likely use outside resources. Reference all id
 and describe how you integrated the ideas or code into your program. This includes online sources, people who have 
 helped you, AI tools you've used, and any other resources that are not solely your own contribution. Update this 
 section as you go. DO NOT forget about it!
+
+[pygame.game -- pygame v2.6.0 documentation](https://www.pygame.org/docs/ref/draw.html)
 
 ---
 
