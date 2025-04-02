@@ -5,39 +5,41 @@
 ❗️Exclamation Marks ❗️indicate action items; you should remove these emoji as you complete/update the items which 
   they accompany. (This means that your final README should have no ❗️in it!)
 
-❗️**Author(s)**: Your name(s) here
+**Author(s)**: Sandy Enriquez Vazquez and Taylor Johnson 
 
-❗️**Google Doc Link**: Your link here
+https://docs.google.com/document/d/1wwb04-wi-Vnr1fn8lHYNCAxTsmfBx94Zvck1MoR5OZU/edit?tab=t.0
 
 ---
 
 ## Milestone 1: Setup, Planning, Design
 
-❗️**Title**: `What is the title of your project? Be creative! Replace this block of text.`
+**Title**: `What is the title of your project? Be creative! The Legend of Tuna: Maze of the Mouse `
 
-❗**Purpose**: `In a single sentence, describe WHAT your project will do. Replace this block of text.`
+**Purpose**: `In a single sentence, describe WHAT your project will do. It will be a new version of T11 The Legend of 
+tuna, where instead of the game being a blank screen, the cat will need to escape a maze.`
 
-❗️**Source Assignment(s)**: `List which original assignments you will base your project on? Replace this block of text.`
+**Source Assignment(s)**: `List which original assignments you will base your project on? 
+T11, T04, CH 15, CH11 ,CH 12, T06, HW 06  `
 
 ❗️**CRC Card(s)**:
   - Create a CRC card for each class that your project will implement.
   - See this link for a sample CRC card and a template to use for your own cards (you will have to make a copy to edit):
     [CRC Card Example](https://docs.google.com/document/d/1JE_3Qmytk_JGztRqkPXWACJwciPH61VCx3idIlBCVFY/edit?usp=sharing)
-  - Tables in markdown are not easy, so we suggest saving your CRC card as an image and including the image(s) in the 
-    README. You can do this by saving an image in the repository and linking to it. See the sample CRC card below - 
-    and REPLACE it with your own:
-  
-![Don't leave me in your README!](image/crc.png "Image of CRC card as an example. Upload your CRC card(s) in place of this one. ")
+  - Tables in markdown are not easy, so we suggest saving your CRC card as an image and including the image(s) in the
+    README. You can do this by saving an image in the repository and linking to it. See the sample CRC card below -
+    and REPLACE it with your own:\
 
-❗️**Branches**: This project will **require** effective use of git. 
+![Maze CRC](CRC%20Cards/Screenshot%202025-04-01%20185145.png " Maze CRC Card")
+![Mouse CRC](CRC%20Cards/Screenshot%202025-04-01%20185339.png " Mouse CRC Card")
+**Branches**: This project will **require** effective use of git. 
 
 Each partner should create a branch at the beginning of the project, and stay on this branch (or branches of their 
 branch) as they work. When you need to bring each others branches together, do so by merging each other's branches 
 into your own, following the process we've discussed in previous assignments, then re-branching out from the merged code.  
 
 ```
-    Branch 1 starting name: _____________
-    Branch 2 starting name: _____________
+    Branch 1 starting name: P01_enriquezvazquez
+    Branch 2 starting name: johnsont7
 ```
 
 ### References 
@@ -46,6 +48,8 @@ Throughout this project, you will likely use outside resources. Reference all id
 and describe how you integrated the ideas or code into your program. This includes online sources, people who have 
 helped you, AI tools you've used, and any other resources that are not solely your own contribution. Update this 
 section as you go. DO NOT forget about it!
+
+[pygame.game -- pygame v2.6.0 documentation](https://www.pygame.org/docs/ref/draw.html)
 
 ---
 
