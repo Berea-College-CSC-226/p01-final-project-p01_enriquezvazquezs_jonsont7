@@ -37,13 +37,16 @@ tuna, where instead of the game being a blank screen, the cat will need to escap
 
 ## Milestone 2: Code Setup and Issue Queue
 
-Most importantly, keep your issue queue up to date, and focus on your code. 🙃
 
-Reflect on what you’ve done so far. How’s it going? Are you feeling behind/ahead? What are you worried about? 
-What has surprised you so far? Describe your general feelings. Be honest with yourself; this section is for you, not me.
 
 ```
-    **Replace this text with your reflection
+    Sandy: I think it is starting to come together and it's less scary than I thought. At first I was feeling very behind
+    and confused but after doing HW 11 I got more clarity on how to break down the program into subtasks. I think 
+    creating the subtasks helped me see visualize and see how to go about setting up my function and ect. I feel like I 
+    am catching up but now I am worried about starting to code. I worried about getting stuck and not know what to do 
+    and fall behind. I don't want my partner to fall behind because of me. I am scared that I am going to get confused 
+    again and not know what to do. But I am going to try to be more optimistic when getting stuck on a problem. 
+    
 ```
 
 ---
