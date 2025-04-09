@@ -47,6 +47,18 @@ tuna, where instead of the game being a blank screen, the cat will need to escap
     and fall behind. I don't want my partner to fall behind because of me. I am scared that I am going to get confused 
     again and not know what to do. But I am going to try to be more optimistic when getting stuck on a problem. 
     
+    Taylor: I feel neither ahead or behind, but I feel that it would be easy to fall behind
+    if we don't continue working on the project as much as we have been. I'm worried that
+    I may not be working on my other classes as much as I should be, but that can be fixed
+    by using my time more effectively. I'm surprised by how much planning out and breaking 
+    down probelems has helped me. For Example, I didn't know exactly how I was going to
+    implement boundaries before breaking problems down into subtask. By breaking down how
+    our program will function, we have a much more solid plan how boundaries will be 
+    implemented, which prevented me from wasting time writing bad code and the code
+    that I do write will be much cleaner than if I haven't planned out how it will work.
+    I'm feeling optimistic about this project as a whole and believe that we can finish
+    on time.
+    
 ```
 
 ---
