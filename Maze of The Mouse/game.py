@@ -18,7 +18,7 @@
 
 import pygame
 from NPC import NPC
-from t11_player import Player
+from player import Player
 
 
 class Game:
