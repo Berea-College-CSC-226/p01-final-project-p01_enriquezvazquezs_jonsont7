@@ -32,6 +32,7 @@ tuna, where instead of the game being a blank screen, the cat will need to escap
 
 
 [pygame.game -- pygame v2.6.0 documentation](https://www.pygame.org/docs/ref/draw.html)
+[ How do I change the size of my Sprite?](https://www.codesters.com/preview/778ed656278a4acd99e0619e8b1c3f63/?lang=en)
 
 ---
 
