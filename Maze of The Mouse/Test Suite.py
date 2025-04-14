@@ -10,13 +10,11 @@ class GameTest(unittest.TestCase):
     def testBoundary(self):
         tGame = game.Game()
         boundaries = []
-        boundaries.append(Boundary.Boundary([200, 200], .01, .01))
-        boundaries.append(Boundary.Boundary([100, 200], .01, .01))
-        self.runTestGame(tGame, boundaries)
+        boundaries.append(Boundary.Boundary([200, 200]))
+        boundaries.append(Boundary.Boundary([125, 200]))
+        self.runTestGameBoundary(tGame, boundaries)
 
-
-
-    def runTestGame(self, tGame, boundaries):
+    def runTestGameBoundary(self, tGame, boundaries):
         while True:
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
@@ -26,5 +24,35 @@ class GameTest(unittest.TestCase):
             pygame.display.update()
             tGame.clock.tick(24)
 
+    def testMaze(self):
+        tGame = game.Game()
+        matrix = [[True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True],
+                  [True, False, False, False, False, False, False, False, False, False, False, False, False, False, False, True],
+                  [True, False, False, False, False, False, False, False, False, False, False, False, False, False, False, True],
+                  [True, False, False, False, False, False, False, False, False, False, False, False, False, False, False, True],
+                  [True, False, False, False, False, False, False, False, False, False, False, False, False, False, False, True],
+                  [True, False, False, False, False, False, False, False, False, False, False, False, False, False, False, True],
+                  [True, False, False, False, False, False, False, False, False, False, False, False, False, False, False, True],
+                  [True, False, False, False, False, False, False, False, False, False, False, False, False, False, False, True],
+                  [True, False, False, False, False, False, False, False, False, False, False, False, False, False, False, True],
+                  [True, False, False, False, False, False, False, False, False, False, False, False, False, False, False, True],
+                  [True, False, False, False, False, False, False, False, False, False, False, False, False, False, False, True],
+                  [True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True]]
+        maze = Maze.Maze(matrix, [400, 300])
+        print(maze.matrix)
+        maze.makeBoundaries()
+        while True:
+            for event in pygame.event.get():
+                if event.type == pygame.QUIT:
+                    tGame.running = False
+            maze.drawMaze(tGame.screen)
+            pygame.display.update()
+            tGame.clock.tick(24)
+
+
 def main():
-    GameTest.testBoundary()
+    tester = GameTest()
+    tester.testMaze()
+    #tester.testBoundary()
+
+main()
