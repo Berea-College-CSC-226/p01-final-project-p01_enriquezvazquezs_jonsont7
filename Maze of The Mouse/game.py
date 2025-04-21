@@ -18,7 +18,9 @@
 
 import pygame
 from NPC import NPC
-from t11_player import Player
+from player import Player
+import Mouse_NPC
+
 
 
 class Game:
@@ -33,7 +35,7 @@ class Game:
         self.screen.fill('#9CBEBA')
         self.clock = pygame.time.Clock()
         self.tuna = Player(self.size)
-        self.tacocat = NPC(self.size)
+        self.tacocat = Mouse_NPC.Mouse(self.size)
 
 
     def run(self):
@@ -57,7 +59,7 @@ class Game:
             else:
                 # Keep playing!
                 self.tuna.movement(pygame.key.get_pressed())
-                self.tacocat.movement()
+                self.tacocat.movement([self.tuna])
                 self.screen.fill('#9CBEBA')
                 self.screen.blit(self.tuna.surf, self.tuna.rect)
                 self.screen.blit(self.tacocat.surf, self.tacocat.rect)
