@@ -26,18 +26,18 @@ class GameTest(unittest.TestCase):
 
     def testMaze(self):
         tGame = game.Game()
-        matrix = [[True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True],
-                  [True, False, False, False, False, False, False, False, False, False, False, False, False, False, False, True],
-                  [True, False, False, False, False, False, False, False, False, False, False, False, False, False, False, True],
-                  [True, False, False, False, False, False, False, False, False, False, False, False, False, False, False, True],
-                  [True, False, False, False, False, False, False, False, False, False, False, False, False, False, False, True],
-                  [True, False, False, False, False, False, False, False, False, False, False, False, False, False, False, True],
-                  [True, False, False, False, False, False, False, False, False, False, False, False, False, False, False, True],
-                  [True, False, False, False, False, False, False, False, False, False, False, False, False, False, False, True],
-                  [True, False, False, False, False, False, False, False, False, False, False, False, False, False, False, True],
-                  [True, False, False, False, False, False, False, False, False, False, False, False, False, False, False, True],
-                  [True, False, False, False, False, False, False, False, False, False, False, False, False, False, False, True],
-                  [True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True]]
+        matrix = [[False, False, False, False, False, False, False, True, False, False, False, False, False, False, False, False],
+                  [False, False, False, False, False, False, False, True, False, False, False, False, False, False, False, False],
+                  [False, False, True, False, False, True, True, True, True, True, True, False, False, True, False, False],
+                  [False, False, True, False, False, True, False, False, False, False, False, False, False, True, False, False],
+                  [False, False, True, False, False, True, False, False, False, False, False, False, False, True, False, False],
+                  [False, False, True, False, False, False, False, False, True, True, True, False, False, True, False, False],
+                  [False, False, True, False, False, False, False, False, True, True, True, False, False, True, False, False],
+                  [True, True, True, False, False, True, False, False, False, False, False, False, False, True, True, True],
+                  [False, False, True, False, False, True, False, False, False, False, False, False, False, True, False, False],
+                  [False, False, True, False, False, True, True, True, True, True, True, False, False, True, False, False],
+                  [False, False, False, False, False, True, False, False, False, False, False, False, False, False, False, False],
+                  [False, False, False, False, False, True, False, False, False, False, False, False, False, False, False, False]]
         maze = Maze.Maze(matrix, [400, 300])
         print(maze.matrix)
         maze.makeBoundaries()
