@@ -70,12 +70,13 @@ Indicate what percentage of the project you have left to complete and how confid
 
 ️**Completion Percentage**: `70 - 100%`
 
-❗️**Confidence**: Describe how confident you feel about completing this project, and why. Then, describe some 
+**Confidence**: Describe how confident you feel about completing this project, and why. Then, describe some 
   strategies you can employ to increase the likelihood that you'll be successful in completing this project 
   before the deadline.
 
 ```
-    **Replace this text with your reflection
+    Sandy- I am pretty condident in completing this assignment but I am also very worried because I am struggling. I am 
+    having a hard time with making the NPCs and having 
 ```
 
 ---
