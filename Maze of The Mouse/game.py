@@ -23,6 +23,7 @@ import Mouse_NPC
 
 
 
+
 class Game:
     def __init__(self):
         """
@@ -36,6 +37,9 @@ class Game:
         self.clock = pygame.time.Clock()
         self.tuna = Player(self.size)
         self.tacocat = Mouse_NPC.Mouse(self.size)
+        #
+        # path_points = [(100, 100), (700, 100), (700, 500), (100, 500)]
+        # self.enemy = Enemy_NPC(self.size, path_points)
 
 
     def run(self):
@@ -49,6 +53,20 @@ class Game:
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
                     self.running = False
+            self.screen.fill('#9CBEBA')
+
+            # keys = pygame.key.get_pressed()
+            # self.tuna.movement(keys)
+            # self.tacocat.movement([self.tuna])
+            #
+            # # Get the player position for enemy detection
+            # player_pos = self.tuna.rect.center
+            # self.enemy.update(player_pos)  # Update enemy behavior
+            #
+            # # Draw everything
+            # self.screen.blit(self.tuna.surf, self.tuna.rect)
+            # self.screen.blit(self.tacocat.surf, self.tacocat.rect)
+            # self.screen.blit(self.enemy.surf, self.enemy.rect)
 
             # Handle user and game events next
             if pygame.sprite.spritecollide(self.tuna, [self.tacocat], False):
