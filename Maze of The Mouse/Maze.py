@@ -3,11 +3,8 @@ import Boundary
 import game
 
 class Maze:
-    def __init__(self, matrix, size):
+    def __init__(self, matrix):
         self.matrix = matrix
-        self.size = size
-        self.cellHeight = size[1]/len(matrix[0])
-        self.cellWidth = size[0]/len(matrix)
         self.boundaries = []
 
     def makeBoundaries(self):
