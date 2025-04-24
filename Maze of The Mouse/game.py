@@ -20,6 +20,7 @@ import pygame
 from NPC import NPC
 from player import Player
 import Mouse_NPC
+import Maze
 
 
 
@@ -37,6 +38,27 @@ class Game:
         self.clock = pygame.time.Clock()
         self.tuna = Player(self.size)
         self.tacocat = Mouse_NPC.Mouse(self.size)
+        matrix = [
+            [False, False, False, False, False, False, False, True, False, False, False, False, False, False, False,
+             False],
+            [False, False, False, False, False, False, False, True, False, False, False, False, False, False, False,
+             False],
+            [False, False, True, False, False, True, True, True, True, True, True, False, False, True, False, False],
+            [False, False, True, False, False, True, False, False, False, False, False, False, False, True, False,
+             False],
+            [False, False, True, False, False, True, False, False, False, False, False, False, False, True, False,
+             False],
+            [False, False, True, False, False, False, False, False, True, True, True, False, False, True, False, False],
+            [False, False, True, False, False, False, False, False, True, True, True, False, False, True, False, False],
+            [True, True, True, False, False, True, False, False, False, False, False, False, False, True, True, True],
+            [False, False, True, False, False, True, False, False, False, False, False, False, False, True, False,
+             False],
+            [False, False, True, False, False, True, True, True, True, True, True, False, False, True, False, False],
+            [False, False, False, False, False, True, False, False, False, False, False, False, False, False, False,
+             False],
+            [False, False, False, False, False, True, False, False, False, False, False, False, False, False, False,
+             False]]
+        self.maze = Maze.Maze(matrix, [400, 300])
         #
         # path_points = [(100, 100), (700, 100), (700, 500), (100, 500)]
         # self.enemy = Enemy_NPC(self.size, path_points)
@@ -79,8 +101,11 @@ class Game:
                 self.tuna.movement(pygame.key.get_pressed())
                 self.tacocat.movement([self.tuna])
                 self.screen.fill('#9CBEBA')
+
+                # Draw Everything
                 self.screen.blit(self.tuna.surf, self.tuna.rect)
                 self.screen.blit(self.tacocat.surf, self.tacocat.rect)
+                self.maze.drawMaze(self.screen)
             pygame.display.update()
             self.clock.tick(24)
 
