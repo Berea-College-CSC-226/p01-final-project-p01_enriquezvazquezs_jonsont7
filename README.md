@@ -32,6 +32,7 @@ tuna, where instead of the game being a blank screen, the cat will need to escap
 
 
 [pygame.game -- pygame v2.6.0 documentation](https://www.pygame.org/docs/ref/draw.html)
+[ How do I change the size of my Sprite?](https://www.codesters.com/preview/778ed656278a4acd99e0619e8b1c3f63/?lang=en)
 
 ---
 
@@ -67,14 +68,15 @@ tuna, where instead of the game being a blank screen, the cat will need to escap
 
 Indicate what percentage of the project you have left to complete and how confident you feel. 
 
-❗️**Completion Percentage**: `0 - 100%`
+️**Completion Percentage**: `70%`
 
-❗️**Confidence**: Describe how confident you feel about completing this project, and why. Then, describe some 
-  strategies you can employ to increase the likelihood that you'll be successful in completing this project 
-  before the deadline.
+  **Confidence**:
 
 ```
-    **Replace this text with your reflection
+     We are confident about completing this project because almost all functionality is in the game we just need to 
+     finish up the EnemyNPC and then get the game logic in and we are complete with the project. We are using stratgies
+     such as task prioritization, meeting at scheduled times, and limiting time we work on the project so that we must use
+     our time effectively. 
 ```
 
 ---
