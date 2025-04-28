@@ -68,7 +68,7 @@ tuna, where instead of the game being a blank screen, the cat will need to escap
 
 Indicate what percentage of the project you have left to complete and how confident you feel. 
 
-️**Completion Percentage**: `70%`
+️**Completion Percentage**: `70 - 100%`
 
   **Confidence**:
 
