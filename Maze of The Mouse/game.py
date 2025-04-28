@@ -58,7 +58,7 @@ class Game:
              False],
             [False, False, False, False, False, True, False, False, False, False, False, False, False, False, False,
              False]]
-        self.maze = Maze.Maze(matrix, [400, 300])
+        self.maze = Maze.Maze(matrix)
         #
         # path_points = [(100, 100), (700, 100), (700, 500), (100, 500)]
         # self.enemy = Enemy_NPC(self.size, path_points)
@@ -70,6 +70,7 @@ class Game:
 
         :return: None
         """
+        self.maze.makeBoundaries()
         while self.running:
             # Handle game ending first
             for event in pygame.event.get():
@@ -97,6 +98,11 @@ class Game:
                 txt = font.render('Taco, you caught me!!', True, "darkblue")
                 self.screen.blit(txt, (self.size[0]//2, self.size[1]-100))
             else:
+                # for bounadary in self.maze.boundaries:
+                #     if pygame.sprite.spritecollide(self.tuna, [bounadary], False):
+                #
+
+
                 # Keep playing!
                 self.tuna.movement(pygame.key.get_pressed())
                 self.tacocat.movement([self.tuna])
@@ -111,6 +117,8 @@ class Game:
 
         pygame.quit()
 
+    # def checkBarrierCollision(sprite, previousPosition):
+    #     if pygame.sprite.spritecollide(sprite, [], False):
 
 def main():
     """
