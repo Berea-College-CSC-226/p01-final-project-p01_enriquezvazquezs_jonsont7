@@ -98,15 +98,15 @@ class Game:
                 txt = font.render('Taco, you caught me!!', True, "darkblue")
                 self.screen.blit(txt, (self.size[0]//2, self.size[1]-100))
             else:
-                # for bounadary in self.maze.boundaries:
-                #     if pygame.sprite.spritecollide(self.tuna, [bounadary], False):
-                #
 
+                playerPosition = [self.tuna.rect.x, self.tuna.rect.y]
 
                 # Keep playing!
                 self.tuna.movement(pygame.key.get_pressed())
                 self.tacocat.movement([self.tuna])
                 self.screen.fill('#9CBEBA')
+
+                self.checkBarrierCollision(self.tuna, playerPosition)
 
                 # Draw Everything
                 self.screen.blit(self.tuna.surf, self.tuna.rect)
@@ -117,8 +117,16 @@ class Game:
 
         pygame.quit()
 
-    # def checkBarrierCollision(sprite, previousPosition):
-    #     if pygame.sprite.spritecollide(sprite, [], False):
+    def checkBarrierCollision(self, sprite, previousPosition):
+        """
+        Doesn't allow sprites to pass throw barriers
+        :param sprite: sprite to check
+        :param previousPosition: the position from before the sprite moved
+        :return: none
+        """
+        for boundary in self.maze.boundaries:
+            if pygame.sprite.spritecollide(sprite, [boundary], False):
+                sprite.rect.move_ip(previousPosition[0] - sprite.rect.x, previousPosition[1] - sprite.rect.y)
 
 def main():
     """
