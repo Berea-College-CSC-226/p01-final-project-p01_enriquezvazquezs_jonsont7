@@ -22,7 +22,7 @@ class NPC(pygame.sprite.Sprite):
     move_distance = 10
     directions = ["north", "east", "south", "west"]
 
-    def __init__(self, screen_size):
+    def __init__(self, screen_size, imgName):
         """
         Represents the Good NPC in the game.
 
@@ -31,7 +31,7 @@ class NPC(pygame.sprite.Sprite):
         print("Spawning NPC")
         self.screen_size = screen_size
         super().__init__()
-        self.surf = pygame.image.load('images/tacocat.png').convert_alpha()
+        self.surf = pygame.image.load(imgName).convert_alpha()
         self.surf.set_colorkey((255, 255, 255), pygame.RLEACCEL)
         self.rect = self.surf.get_rect()
         self.path = random.choice(self.directions)

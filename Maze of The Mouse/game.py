@@ -37,8 +37,12 @@ class Game:
         self.screen = pygame.display.set_mode(self.size)
         self.screen.fill('#9CBEBA')
         self.clock = pygame.time.Clock()
-        self.tuna = Player(self.size)
-        self.tacocat = Enemy_NPC.Enemy_NPC(self.size, position = [725, 510])
+        self.tuna = Player(self.size, [25, 425])
+        self.tacocat = Enemy_NPC.Enemy_NPC(self.size, "images/tacocat.png", position = [725, 510])
+        self.whiskers = Enemy_NPC.Enemy_NPC(self.size, "images/whiskers.png", position = [25, 25])
+        self.mouse = Mouse_NPC.Mouse(self.size, "images/mouse.png", position = [325, 350])
+
+
         matrix = [
             [False, False, False, False, False, False, False, True, False, False, False, False, False, False, False,
              False],
@@ -79,21 +83,8 @@ class Game:
                     self.running = False
             self.screen.fill('#9CBEBA')
 
-            # keys = pygame.key.get_pressed()
-            # self.tuna.movement(keys)
-            # self.tacocat.movement([self.tuna])
-            #
-            # # Get the player position for enemy detection
-            # player_pos = self.tuna.rect.center
-            # self.enemy.update(player_pos)  # Update enemy behavior
-            #
-            # # Draw everything
-            # self.screen.blit(self.tuna.surf, self.tuna.rect)
-            # self.screen.blit(self.tacocat.surf, self.tacocat.rect)
-            # self.screen.blit(self.enemy.surf, self.enemy.rect)
-
             # Handle user and game events next
-            if pygame.sprite.spritecollide(self.tuna, [self.tacocat], False):
+            if pygame.sprite.spritecollide(self.tuna, [self.mouse], False):
                 # Collision! Prints the game ending text to the screen.
                 font = pygame.font.SysFont("ComicSans", 36)
                 txt = font.render('Taco, you caught me!!', True, "darkblue")
@@ -106,12 +97,14 @@ class Game:
                 self.tuna.movement(pygame.key.get_pressed())
                 self.tacocat.pathway1()
                 self.screen.fill('#9CBEBA')
-                self.checkBarrierCollision(self.tuna)
-                self.keepOnScreen(self.tuna)
+                for sprite in [self.tuna, self.tacocat, self.mouse, self.whiskers]:
+                    self.checkBarrierCollision(sprite)
+                    self.keepOnScreen(sprite)
+                self.mouse.moveAwayFromOther(self.mouse.get_closest_cat_position([self.tuna, self.tacocat, self.whiskers]))
 
                 # Draw Everything
-                self.screen.blit(self.tuna.surf, self.tuna.rect)
-                self.screen.blit(self.tacocat.surf, self.tacocat.rect)
+                for sprite in [self.tuna, self.tacocat, self.mouse, self.whiskers]:
+                    self.screen.blit(sprite.surf, sprite.rect)
                 self.maze.drawMaze(self.screen)
             pygame.display.update()
             self.clock.tick(24)
@@ -126,7 +119,7 @@ class Game:
         """
         for boundary in self.maze.boundaries:
             if pygame.sprite.spritecollide(sprite, [boundary], False):
-                if sprite.rect.right - boundary.rect.left > 0 and sprite.rect.right - boundary.rect.left < 5:
+                if 0 < sprite.rect.right - boundary.rect.left and sprite.rect.right - boundary.rect.left < 5:
                     sprite.rect.move_ip(-sprite.move_distance, 0)
                 elif sprite.rect.left - boundary.rect.right < 0 and sprite.rect.left - boundary.rect.right > -5:
                     sprite.rect.move_ip(sprite.move_distance, 0)

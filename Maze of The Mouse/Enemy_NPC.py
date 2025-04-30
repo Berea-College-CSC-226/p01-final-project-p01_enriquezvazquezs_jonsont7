@@ -4,14 +4,15 @@ import pygame, random, math
 from NPC import NPC
 
 class Enemy_NPC(NPC):
-    def __init__(self, screen_size, position = [0, 0]):
-        super().__init__(screen_size)
+    def __init__(self, screen_size, imgName, position = [0, 0]):
+        super().__init__(screen_size, imgName)
         # self.path_points = path_points  # II.A.1: list of (x, y) points
         self.path_index = 0  # current target index in the path
         # self.detection_radius = detection_radius
         self.following_mouse = False
         self.mouse_target = None
         self.rect.move_ip(position[0], position[1])
+        self.direction = 0
 
     def moveUp(self):
         self.rect.move_ip(0, -self.move_distance)
@@ -24,6 +25,28 @@ class Enemy_NPC(NPC):
 
     def moveLeft(self):
         self.rect.move_ip(-self.move_distance, 0)
+
+    def moveForward(self):
+        if self.direction == 0:
+            self.moveRight()
+        elif self.direction == 1:
+            self.moveUp()
+        elif self.direction == 2:
+            self.moveLeft()
+        else:
+            self.moveDown()
+
+    def turnLeft(self):
+        if self.direction == 3:
+            self.direction = 0
+        else:
+            self.direction += 1
+
+    def turnRight(self):
+        if self.direction == 0:
+            self.direction = 4
+        else:
+            self.direction -= 1
 
     def pathway1(self):
         pass
