@@ -20,6 +20,7 @@ import pygame
 
 
 class Player(pygame.sprite.Sprite):
+    move_distance = 3
     def __init__(self, screen_size):
         """
         Represents the player in the game.
@@ -32,7 +33,7 @@ class Player(pygame.sprite.Sprite):
         self.surf = pygame.image.load('images/tuna.png').convert_alpha()
         self.surf.set_colorkey((255, 255, 255), pygame.RLEACCEL)
         self.rect = self.surf.get_rect()
-        self.rect.move_ip(self.screen_size[0]//2, self.screen_size[1]//2)
+        self.rect.move_ip(self.screen_size[0], self.screen_size[1])
 
 
     def movement(self, keys):
@@ -43,10 +44,10 @@ class Player(pygame.sprite.Sprite):
         :return: None
         """
         if keys[pygame.K_UP]:
-            self.rect.move_ip(0, -3)
+            self.rect.move_ip(0, -self.move_distance)
         elif keys[pygame.K_DOWN]:
-            self.rect.move_ip(0, 3)
+            self.rect.move_ip(0, self.move_distance)
         if keys[pygame.K_RIGHT]:
-            self.rect.move_ip(3, 0)
+            self.rect.move_ip(self.move_distance, 0)
         elif keys[pygame.K_LEFT]:
-            self.rect.move_ip(-3, 0)
+            self.rect.move_ip(-self.move_distance, 0)

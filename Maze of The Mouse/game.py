@@ -20,6 +20,7 @@ import pygame
 from NPC import NPC
 from player import Player
 import Mouse_NPC
+import Enemy_NPC
 import Maze
 
 
@@ -37,7 +38,7 @@ class Game:
         self.screen.fill('#9CBEBA')
         self.clock = pygame.time.Clock()
         self.tuna = Player(self.size)
-        self.tacocat = Mouse_NPC.Mouse(self.size)
+        self.tacocat = Enemy_NPC.Enemy_NPC(self.size, position = [575, 510])
         matrix = [
             [False, False, False, False, False, False, False, True, False, False, False, False, False, False, False,
              False],
@@ -103,10 +104,10 @@ class Game:
 
                 # Keep playing!
                 self.tuna.movement(pygame.key.get_pressed())
-                self.tacocat.movement([self.tuna])
+                #self.tacocat.movement([self.tuna])
                 self.screen.fill('#9CBEBA')
 
-                self.checkBarrierCollision(self.tuna, playerPosition)
+                self.checkBarrierCollision(self.tuna)
 
                 # Draw Everything
                 self.screen.blit(self.tuna.surf, self.tuna.rect)
@@ -117,16 +118,24 @@ class Game:
 
         pygame.quit()
 
-    def checkBarrierCollision(self, sprite, previousPosition):
+    def checkBarrierCollision(self, sprite):
         """
         Doesn't allow sprites to pass throw barriers
         :param sprite: sprite to check
-        :param previousPosition: the position from before the sprite moved
         :return: none
         """
         for boundary in self.maze.boundaries:
             if pygame.sprite.spritecollide(sprite, [boundary], False):
-                sprite.rect.move_ip(previousPosition[0] - sprite.rect.x, previousPosition[1] - sprite.rect.y)
+                #sprite.rect.move_ip(previousPosition[0] - sprite.rect.x, previousPosition[1] - sprite.rect.y)
+                if sprite.rect.right - boundary.rect.left > 0 and sprite.rect.left - boundary.rect.right < -5:
+                    sprite.rect.move_ip(-sprite.move_distance, 0)
+                elif sprite.rect.left < boundary.rect.right:
+                    sprite.rect.move_ip(sprite.move_distance, 0)
+                # if sprite.rect.bottom - boundary.rect.top > 0 and sprite.rect.bottom - boundary.rect.top < -5:
+                #     sprite.rect.move_ip(0, sprite.move_distance)
+                # elif sprite.rect.top < boundary.rect.bottom:
+                #     sprite.rect.move_ip(0, -sprite.move_distance)
+
 
 def main():
     """

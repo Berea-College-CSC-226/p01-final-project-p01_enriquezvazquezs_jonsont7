@@ -10,12 +10,13 @@ class Mouse(NPC):
     move_distance = 10
     directions = ["north", "east", "south", "west"]
 
-    def __init__(self, screen_size):
+    def __init__(self, screen_size, position = [0, 0]):
         """
         Represents the Mouse NPC in the game.
         """
         super().__init__(screen_size)
         self.move_distance = 4
+        self.rect.move_ip(position[0], position[1])
 
     def movement(self, others):
         """
