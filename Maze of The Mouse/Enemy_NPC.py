@@ -25,3 +25,9 @@ class Enemy_NPC(NPC):
 
     def moveLeft(self):
         self.rect.move_ip(-self.moveSpeed, 0)
+
+    def pathway1(self):
+        pass
+
+    def pathway2(self):
+        pass

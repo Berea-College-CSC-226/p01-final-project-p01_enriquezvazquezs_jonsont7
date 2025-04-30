@@ -104,6 +104,7 @@ class Game:
 
                 # Keep playing!
                 self.tuna.movement(pygame.key.get_pressed())
+                self.tacocat.pathway1()
                 self.screen.fill('#9CBEBA')
                 self.checkBarrierCollision(self.tuna)
 
