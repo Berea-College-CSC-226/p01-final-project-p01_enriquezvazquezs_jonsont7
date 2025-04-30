@@ -100,13 +100,14 @@ class Game:
                 self.screen.blit(txt, (self.size[0]//2, self.size[1]-100))
             else:
 
-                playerPosition = [self.tuna.rect.x, self.tuna.rect.y]
+                #playerPosition = [self.tuna.rect.x, self.tuna.rect.y]
 
                 # Keep playing!
                 self.tuna.movement(pygame.key.get_pressed())
                 self.tacocat.pathway1()
                 self.screen.fill('#9CBEBA')
                 self.checkBarrierCollision(self.tuna)
+                self.keepOnScreen(self.tuna)
 
                 # Draw Everything
                 self.screen.blit(self.tuna.surf, self.tuna.rect)
@@ -125,15 +126,24 @@ class Game:
         """
         for boundary in self.maze.boundaries:
             if pygame.sprite.spritecollide(sprite, [boundary], False):
-                #sprite.rect.move_ip(previousPosition[0] - sprite.rect.x, previousPosition[1] - sprite.rect.y)
-                if sprite.rect.right - boundary.rect.left > 0 and sprite.rect.left - boundary.rect.right < -5:
+                if sprite.rect.right - boundary.rect.left > 0 and sprite.rect.right - boundary.rect.left < 5:
                     sprite.rect.move_ip(-sprite.move_distance, 0)
-                elif sprite.rect.left < boundary.rect.right:
+                elif sprite.rect.left - boundary.rect.right < 0 and sprite.rect.left - boundary.rect.right > -5:
                     sprite.rect.move_ip(sprite.move_distance, 0)
-                # if sprite.rect.bottom - boundary.rect.top > 0 and sprite.rect.bottom - boundary.rect.top < -5:
-                #     sprite.rect.move_ip(0, sprite.move_distance)
-                # elif sprite.rect.top < boundary.rect.bottom:
-                #     sprite.rect.move_ip(0, -sprite.move_distance)
+                elif sprite.rect.top - boundary.rect.bottom < 0 and sprite.rect.top - boundary.rect.bottom > -5:
+                    sprite.rect.move_ip(0, sprite.move_distance)
+                elif sprite.rect.bottom - boundary.rect.top > 0 and sprite.rect.bottom - boundary.rect.top < 5:
+                    sprite.rect.move_ip(0, -sprite.move_distance)
+
+    def keepOnScreen(self, sprite):
+        if sprite.rect.top < 0:
+            sprite.rect.move_ip(0, sprite.move_distance)
+        if sprite.rect.bottom > self.size[1]:
+            sprite.rect.move_ip(0, -sprite.move_distance)
+        if sprite.rect.left < 0:
+            sprite.rect.move_ip(sprite.move_distance, 0)
+        if sprite.rect.right > self.size[0]:
+            sprite.rect.move_ip(-sprite.move_distance, 0)
 
 
 def main():
