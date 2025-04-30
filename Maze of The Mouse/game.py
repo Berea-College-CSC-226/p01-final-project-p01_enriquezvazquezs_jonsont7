@@ -38,7 +38,7 @@ class Game:
         self.screen.fill('#9CBEBA')
         self.clock = pygame.time.Clock()
         self.tuna = Player(self.size)
-        self.tacocat = Enemy_NPC.Enemy_NPC(self.size, position = [575, 510])
+        self.tacocat = Enemy_NPC.Enemy_NPC(self.size, position = [725, 510])
         matrix = [
             [False, False, False, False, False, False, False, True, False, False, False, False, False, False, False,
              False],
