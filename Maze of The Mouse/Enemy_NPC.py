@@ -49,8 +49,31 @@ class Enemy_NPC(NPC):
             self.direction -= 1
 
     def pathway1(self):
-        pass
-
+        self.moveForward()
+        print (str(self.rect.x) + ", " + str(self.rect.y))
+        if self.rect.x == 580 and self.rect.y == 510:
+            self.turnRight()
+        if self.rect.x == 580 and self.rect.y == -5:
+            self.turnRight()
+        if self.rect.x == 765 and self.rect.y == 0:
+            self.turnRight()
+            self.turnRight()
+        if self.rect.x == 570 and self.rect.y == 0:
+            self.turnLeft()
+        if self.rect.x == 570 and self.rect.y == 165:
+            self.turnRight()
+        if self.rect.x == 325 and self.rect.y == 165:
+            self.turnLeft()
+        if self.rect.x == 325 and self.rect.y == 380:
+            self.turnLeft()
+        if self.rect.x == 565 and self.rect.y == 375:
+            self.turnRight()
+        if self.rect.x == 565 and self.rect.y == 515:
+            self.turnLeft()
+        if self.rect.x == 725 and self.rect.y == 515:
+            self.turnLeft()
+        if self.rect.x == 725 and self.rect.y == 510:
+            self.turnLeft()
     def pathway2(self):
         self.moveForward()
         print(str(self.rect.x) + ", " + str(self.rect.y))
