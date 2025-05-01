@@ -116,7 +116,28 @@ Each partner should write three to four well-written paragraphs address the foll
 ```
 
 ```
-    Partner 2: **Replace this text with your reflection
+    Taylor: 
+   Me and Sandy are both in Intro to Game Design, so I thought that we both would have a good idea on how to navigate 
+making a pygame program. Also, I enjoy making games because I enjoy the complexity that comes with game logic. Our 
+final design is nearly what I imagined, but the result isn’t as good as I originally imagined. I thought the project 
+was going to turn out better than it did; I think it didn't turn out that well because it’s very short because we 
+didn’t have time to make multiple levels because we spent all our time just getting the game to work.
+    
+   Something I realized during this project is making games in pygame is terribly inefficient because there are not any 
+shortcuts like there would be in a game engine. I also learned how to actually use github; For a lot of this class I 
+didn’t actually know how to utilize github effectively, so working on this project really helped me learn how to use 
+github. The hardest part of this project for me was using github, it was rough starting out but I eventually learned and
+got more comfortable using github by the end of the project. Knowing what I know now, I would’ve worked much faster and
+efficiently, which would allow me to add more to our game such as having multiple levels.
+  
+   Difficulties I ran into when working with my partner were organization issues. Previously organization was easier because
+I always worked on my own projects by myself. It's a lot harder to organize a program when two people are actively 
+working on it. I think we would have benefitted by combining our programs more often. Another issue I ran into with 
+my working with Sandy was she would make a bunch of code and then, it wouldn't work and due to poor communication from 
+both of us, it wasn’t fixed until way after it should’ve been. Even so, working with Sandy was good; We usually met 
+multiple times a week outside of class and were productive while meeting. Sandy has a good work ethic and is easy to 
+get along with making working with her enjoyable.
+
 ```
 
 ---
