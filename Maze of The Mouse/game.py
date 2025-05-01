@@ -41,7 +41,7 @@ class Game:
         self.tacocat = Enemy_NPC.Enemy_NPC(self.size, "images/tacocat.png", position = [725, 510])
         self.tacocat.direction = 2
         self.whiskers = Enemy_NPC.Enemy_NPC(self.size, "images/whiskers.png", position = [25, 25])
-        self.mouse = Mouse_NPC.Mouse(self.size, "images/mouse.png", position = [325, 350])
+        self.mouse = Mouse_NPC.Mouse(self.size, "images/mouse.png", position = [325, 200])
 
 
         matrix = [

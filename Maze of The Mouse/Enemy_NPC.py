@@ -5,12 +5,14 @@ from NPC import NPC
 
 class Enemy_NPC(NPC):
     def __init__(self, screen_size, imgName, position = [0, 0]):
+        """
+
+        :param screen_size:
+        :param imgName:
+        :param position:
+        """
         super().__init__(screen_size, imgName)
-        # self.path_points = path_points  # II.A.1: list of (x, y) points
         self.path_index = 0  # current target index in the path
-        # self.detection_radius = detection_radius
-        self.following_mouse = False
-        self.mouse_target = None
         self.rect.move_ip(position[0], position[1])
         self.direction = 0
 
@@ -49,6 +51,10 @@ class Enemy_NPC(NPC):
             self.direction -= 1
 
     def pathway1(self):
+        """
+        Pathway of Taco Cat in the Maze
+        :return: None
+        """
         self.moveForward()
         print (str(self.rect.x) + ", " + str(self.rect.y))
         if self.rect.x == 580 and self.rect.y == 510:
@@ -75,8 +81,11 @@ class Enemy_NPC(NPC):
         if self.rect.x == 725 and self.rect.y == 510:
             self.turnLeft()
     def pathway2(self):
+        """
+        Pathway of Whiskers on the Maze
+        :return: None
+        """
         self.moveForward()
-        print(str(self.rect.x) + ", " + str(self.rect.y))
         if self.rect.x == 200 and self.rect.y == 25:
             self.turnRight()
         if self.rect.x == 200 and self.rect.y == 275:

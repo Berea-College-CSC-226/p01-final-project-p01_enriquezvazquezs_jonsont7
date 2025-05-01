@@ -20,7 +20,7 @@ import pygame
 
 
 class Player(pygame.sprite.Sprite):
-    move_distance = 3
+    move_distance = 4
     def __init__(self, screen_size, position = [0, 0]):
         """
         Represents the player in the game.

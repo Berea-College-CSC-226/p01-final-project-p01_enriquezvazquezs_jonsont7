@@ -7,7 +7,7 @@ import math
 
 
 class Mouse(NPC):
-    move_distance = 10
+    move_distance = 50
     directions = ["north", "east", "south", "west"]
 
     def __init__(self, screen_size, imgName, position = [0, 0]):
