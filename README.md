@@ -95,7 +95,7 @@ You should already have a few items in here from the prior weeks. Create a new i
 deficiencies that remain in your code. Bugs found that aren't acknowledged in the queue will be penalized.
 
 ### ❗Peer Evaluation
-
+[README.md](README.md)
 It is important that all members of your team contribute equitably. The peer evaluation is your chance to either 
 a) celebrate the great work you all did together as an effective team, or b) indicate to the instructor if a member of
 your team did not contribute their fair share. Grades will be adjusted for any team member who is evaluated poorly. Your

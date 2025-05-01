@@ -22,11 +22,7 @@ class Mouse(NPC):
         """
         Moves the Mouse away from the closest cat.
         """
-        # closest_cat_pos = self.get_closest(others)
-        # if closest_cat_pos:
-        #     direction = self.get_escape_direction(closest_cat_pos)
-        #     self.move_opposite(direction)
-        # self.get_direction()
+
         self.moveAwayFromOther(self.get_closest_cat_position(others))
 
     def get_closest_cat_position(self, others):
@@ -53,33 +49,7 @@ class Mouse(NPC):
         b = pos1[1] - pos2[1]
         return math.sqrt(a ** 2 + b ** 2)
 
-    # def get_escape_direction(self, cat_pos):
-    #     """
-    #     Determines the direction the mouse should run away.
-    #     """
-    #     dx = self.rect.centerx - cat_pos[0]
-    #     dy = self.rect.centery - cat_pos[1]
-    #
-    #     if abs(dx) > abs(dy):
-    #         return "east" if dx > 0 else "west"
-    #     else:
-    #         return "south" if dy > 0 else "north"
 
-    # def move_opposite(self, direction):
-    #     """
-    #     Moves in the opposite direction of the closest cat,
-    #     staying within the screen boundaries.
-    #     """
-    #     distance = int(self.move_distance)
-    #
-    #     if direction == "north" and self.rect.bottom + distance <= self.screen_size[1]:
-    #         self.rect.move_ip(0, distance)  # Move down
-    #     elif direction == "south" and self.rect.top - distance >= 0:
-    #         self.rect.move_ip(0, -distance)  # Move up
-    #     elif direction == "east" and self.rect.left - distance >= 0:
-    #         self.rect.move_ip(-distance, 0)  # Move left
-    #     elif direction == "west" and self.rect.right + distance <= self.screen_size[0]:
-    #         self.rect.move_ip(distance, 0)
 
     def moveAwayFromOther(self, other):
         selfPos = (self.rect.centerx, self.rect.centery)

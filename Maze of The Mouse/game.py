@@ -39,6 +39,7 @@ class Game:
         self.clock = pygame.time.Clock()
         self.tuna = Player(self.size, [25, 425])
         self.tacocat = Enemy_NPC.Enemy_NPC(self.size, "images/tacocat.png", position = [725, 510])
+        self.tacocat.direction = 2
         self.whiskers = Enemy_NPC.Enemy_NPC(self.size, "images/whiskers.png", position = [25, 25])
         self.mouse = Mouse_NPC.Mouse(self.size, "images/mouse.png", position = [325, 350])
 
@@ -119,13 +120,13 @@ class Game:
         """
         for boundary in self.maze.boundaries:
             if pygame.sprite.spritecollide(sprite, [boundary], False):
-                if 0 < sprite.rect.right - boundary.rect.left and sprite.rect.right - boundary.rect.left < 5:
+                if 0 < sprite.rect.right - boundary.rect.left and sprite.rect.right - boundary.rect.left < 7:
                     sprite.rect.move_ip(-sprite.move_distance, 0)
-                elif sprite.rect.left - boundary.rect.right < 0 and sprite.rect.left - boundary.rect.right > -5:
+                elif sprite.rect.left - boundary.rect.right < 0 and sprite.rect.left - boundary.rect.right > -7:
                     sprite.rect.move_ip(sprite.move_distance, 0)
-                elif sprite.rect.top - boundary.rect.bottom < 0 and sprite.rect.top - boundary.rect.bottom > -5:
+                elif sprite.rect.top - boundary.rect.bottom < 0 and sprite.rect.top - boundary.rect.bottom > -7:
                     sprite.rect.move_ip(0, sprite.move_distance)
-                elif sprite.rect.bottom - boundary.rect.top > 0 and sprite.rect.bottom - boundary.rect.top < 5:
+                elif sprite.rect.bottom - boundary.rect.top > 0 and sprite.rect.bottom - boundary.rect.top < 7:
                     sprite.rect.move_ip(0, -sprite.move_distance)
 
     def keepOnScreen(self, sprite):
