@@ -1,6 +1,6 @@
 from pdb import post_mortem
-
-import pygame, random, math
+from math import hypot
+import pygame, random
 from NPC import NPC
 
 class Enemy_NPC(NPC):
@@ -44,7 +44,7 @@ class Enemy_NPC(NPC):
 
     def turnRight(self):
         if self.direction == 0:
-            self.direction = 4
+            self.direction = 3
         else:
             self.direction -= 1
 
@@ -52,4 +52,33 @@ class Enemy_NPC(NPC):
         pass
 
     def pathway2(self):
-        pass
+        self.moveForward()
+        print(str(self.rect.x) + ", " + str(self.rect.y))
+        if self.rect.x == 200 and self.rect.y == 25:
+            self.turnRight()
+        if self.rect.x == 200 and self.rect.y == 275:
+            self.turnLeft()
+        if self.rect.x == 325 and self.rect.y == 275:
+            self.turnLeft()
+        if self.rect.x == 325 and self.rect.y == 150:
+            self.turnRight()
+        if self.rect.x == 575 and self.rect.y == 150:
+            self.turnRight()
+        if self.rect.x == 575 and self.rect.y == 400:
+            self.turnRight()
+        if self.rect.x == 300 and self.rect.y == 400:
+            self.turnRight()
+        if self.rect.x == 300 and self.rect.y == 280:
+            self.turnLeft()
+        if self.rect.x == 200 and self.rect.y == 280:
+            self.turnLeft()
+        if self.rect.x == 200 and self.rect.y == 550:
+            self.turnRight()
+        if self.rect.x == 195 and self.rect.y == 550:
+            self.turnRight()
+        if self.rect.x == 195 and self.rect.y == 30:
+            self.turnLeft()
+        if self.rect.x == 25 and self.rect.y == 30:
+            self.turnRight()
+        if self.rect.x == 25 and self.rect.y == 25:
+            self.turnRight()

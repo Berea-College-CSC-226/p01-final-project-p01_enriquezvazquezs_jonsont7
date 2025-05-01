@@ -87,8 +87,18 @@ class Game:
             if pygame.sprite.spritecollide(self.tuna, [self.mouse], False):
                 # Collision! Prints the game ending text to the screen.
                 font = pygame.font.SysFont("ComicSans", 36)
-                txt = font.render('Taco, you caught me!!', True, "darkblue")
-                self.screen.blit(txt, (self.size[0]//2, self.size[1]-100))
+                txt = font.render('You Win!', True, "darkblue")
+                self.screen.blit(txt, (self.size[0]//4, self.size[1]-100))
+            elif pygame.sprite.spritecollide(self.tacocat, [self.mouse], False):
+                # Collision! Prints the game ending text to the screen.
+                font = pygame.font.SysFont("ComicSans", 36)
+                txt = font.render('Taco Cat Wins! You Lose', True, "darkblue")
+                self.screen.blit(txt, (self.size[0] // 4, self.size[1] - 100))
+            elif pygame.sprite.spritecollide(self.whiskers, [self.mouse], False):
+                # Collision! Prints the game ending text to the screen.
+                font = pygame.font.SysFont("ComicSans", 36)
+                txt = font.render('Whiskers Wins! You Lose', True, "darkblue")
+                self.screen.blit(txt, (self.size[0] // 4, self.size[1] - 100))
             else:
 
                 #playerPosition = [self.tuna.rect.x, self.tuna.rect.y]
@@ -96,6 +106,9 @@ class Game:
                 # Keep playing!
                 self.tuna.movement(pygame.key.get_pressed())
                 self.tacocat.pathway1()
+                self.whiskers.pathway2()
+
+
                 self.screen.fill('#9CBEBA')
                 for sprite in [self.tuna, self.tacocat, self.mouse, self.whiskers]:
                     self.checkBarrierCollision(sprite)
@@ -119,13 +132,13 @@ class Game:
         """
         for boundary in self.maze.boundaries:
             if pygame.sprite.spritecollide(sprite, [boundary], False):
-                if 0 < sprite.rect.right - boundary.rect.left and sprite.rect.right - boundary.rect.left < 5:
+                if 0 < sprite.rect.right - boundary.rect.left and sprite.rect.right - boundary.rect.left < 7:
                     sprite.rect.move_ip(-sprite.move_distance, 0)
-                elif sprite.rect.left - boundary.rect.right < 0 and sprite.rect.left - boundary.rect.right > -5:
+                elif sprite.rect.left - boundary.rect.right < 0 and sprite.rect.left - boundary.rect.right > -7:
                     sprite.rect.move_ip(sprite.move_distance, 0)
-                elif sprite.rect.top - boundary.rect.bottom < 0 and sprite.rect.top - boundary.rect.bottom > -5:
+                elif sprite.rect.top - boundary.rect.bottom < 0 and sprite.rect.top - boundary.rect.bottom > -7:
                     sprite.rect.move_ip(0, sprite.move_distance)
-                elif sprite.rect.bottom - boundary.rect.top > 0 and sprite.rect.bottom - boundary.rect.top < 5:
+                elif sprite.rect.bottom - boundary.rect.top > 0 and sprite.rect.bottom - boundary.rect.top < 7:
                     sprite.rect.move_ip(0, -sprite.move_distance)
 
     def keepOnScreen(self, sprite):
