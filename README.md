@@ -66,17 +66,13 @@ tuna, where instead of the game being a blank screen, the cat will need to escap
 
 ## Milestone 3: Virtual Check-In
 
-Indicate what percentage of the project you have left to complete and how confident you feel. 
-
-️**Completion Percentage**: `70 - 100%`
-
-**Confidence**: Describe how confident you feel about completing this project, and why. Then, describe some 
-  strategies you can employ to increase the likelihood that you'll be successful in completing this project 
-  before the deadline.
+️**Completion Percentage**: `70 %`
 
 ```
-    Sandy- I am pretty condident in completing this assignment but I am also very worried because I am struggling. I am 
-    having a hard time with making the NPCs and having 
+    We are confident about completing this project because almost all functionality is in the game we just need to 
+    finish up the EnemyNPC and then get the game logic in and we are complete with the project. We are using stratgies
+    such as task prioritization, meeting at scheduled times, and limiting time we work on the project so that we must use
+    our time effectively. 
 ```
 
 ---
@@ -84,10 +80,6 @@ Indicate what percentage of the project you have left to complete and how confid
 ## Milestone 4: Final Code, Presentation, Demo
 
 ### Reflection
-
-```
-    Partner 1: **Replace this text with your reflection
-```
 
 ```
     Taylor: 
@@ -111,15 +103,18 @@ my working with Sandy was she would make a bunch of code and then, it wouldn't w
 both of us, it wasn’t fixed until way after it should’ve been. Even so, working with Sandy was good; We usually met 
 multiple times a week outside of class and were productive while meeting. Sandy has a good work ethic and is easy to 
 get along with making working with her enjoyable.
+```
 
-    Partner 2: Sandy Enriquez Vazquez 
+```
+
+    Sandy:
         From the beginning of this project, I knew I wanted to create a game. I’ve recently 
-    been more interested in game development because of my game design class. When Taylor 
-    suggested the idea of designing a maze game, I was very interested and thought it was a 
-    good idea. The concept seemed fun, but I was also a bit worried because I was confused 
-    about how we would code the maze, which seemed very difficult. Our project stayed very 
-    similar to the initial idea of the game. The main things I remember from our initial idea 
-    were the mouse NPC moving away from the player and the enemy NPCs, the player competing 
+   been more interested in game development because of my game design class. When Taylor 
+   suggested the idea of designing a maze game, I was very interested and thought it was a 
+   good idea. The concept seemed fun, but I was also a bit worried because I was confused 
+   about how we would code the maze, which seemed very difficult. Our project stayed very 
+   similar to the initial idea of the game. The main things I remember from our initial idea 
+   were the mouse NPC moving away from the player and the enemy NPCs, the player competing 
    against the enemy NPCs to get to the mouse, and the enemy NPCs leaving their pathway to get 
    to the mouse. We decided not to add the enemy NPCs, leaving their pathway to get the mouse. 
         Throughout the process, I learned that I need to speak up more when I have issues and 
