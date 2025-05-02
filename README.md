@@ -129,7 +129,7 @@ get along with making working with her enjoyable.
    should’ve made the mouse and player spawning points random to add more variety to the game. 
    I also wish we had used more GUIs to make our game interesting. Overall, I believe Taylor and 
    I worked pretty well. I learned a lot working with him. Miscommunication was challenging because 
-   sometimes I misunderstood what we were trying to do. 
+   sometimes I misunderstood what we were trying to do.  
 
 ```
 
