@@ -83,21 +83,7 @@ Indicate what percentage of the project you have left to complete and how confid
 
 ## Milestone 4: Final Code, Presentation, Demo
 
-### ❗User Instructions
-
-In a paragraph, explain how to use your program. Assume the user is starting just after they hit the "Run" button 
-in PyCharm. 
-
-
-### ❗Reflection
-
-Each partner should write three to four well-written paragraphs address the following (at a minimum):
-- Why did you select the project that you did?
-- How closely did your final project reflect your initial design?
-- What did you learn from this process?
-- What was the hardest part of the final project?
-- What would you do differently next time, knowing what you know now?
-- How well did you work with your partner? What made it go well? What made it challenging?
+### Reflection
 
 ```
     Partner 1: **Replace this text with your reflection
