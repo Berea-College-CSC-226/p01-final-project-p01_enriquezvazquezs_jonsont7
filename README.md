@@ -83,33 +83,7 @@ Indicate what percentage of the project you have left to complete and how confid
 
 ## Milestone 4: Final Code, Presentation, Demo
 
-### ❗User Instructions
-
-In a paragraph, explain how to use your program. Assume the user is starting just after they hit the "Run" button 
-in PyCharm. 
-
-### ❗Errors and Constraints
-
-Every program has bugs or features that had to be scrapped for time. These bugs should be tracked in the issue queue. 
-You should already have a few items in here from the prior weeks. Create a new issue for any undocumented errors and 
-deficiencies that remain in your code. Bugs found that aren't acknowledged in the queue will be penalized.
-
-### ❗Peer Evaluation
-[README.md](README.md)
-It is important that all members of your team contribute equitably. The peer evaluation is your chance to either 
-a) celebrate the great work you all did together as an effective team, or b) indicate to the instructor if a member of
-your team did not contribute their fair share. Grades will be adjusted for any team member who is evaluated poorly. Your
-commit history will be used as evidence, so make sure you are using git effectively!
-
-### ❗Reflection
-
-Each partner should write three to four well-written paragraphs address the following (at a minimum):
-- Why did you select the project that you did?
-- How closely did your final project reflect your initial design?
-- What did you learn from this process?
-- What was the hardest part of the final project?
-- What would you do differently next time, knowing what you know now?
-- How well did you work with your partner? What made it go well? What made it challenging?
+### Reflection
 
 ```
     Partner 1: **Replace this text with your reflection
@@ -137,6 +111,30 @@ my working with Sandy was she would make a bunch of code and then, it wouldn't w
 both of us, it wasn’t fixed until way after it should’ve been. Even so, working with Sandy was good; We usually met 
 multiple times a week outside of class and were productive while meeting. Sandy has a good work ethic and is easy to 
 get along with making working with her enjoyable.
+
+    Partner 2: Sandy Enriquez Vazquez 
+        From the beginning of this project, I knew I wanted to create a game. I’ve recently 
+    been more interested in game development because of my game design class. When Taylor 
+    suggested the idea of designing a maze game, I was very interested and thought it was a 
+    good idea. The concept seemed fun, but I was also a bit worried because I was confused 
+    about how we would code the maze, which seemed very difficult. Our project stayed very 
+    similar to the initial idea of the game. The main things I remember from our initial idea 
+    were the mouse NPC moving away from the player and the enemy NPCs, the player competing 
+   against the enemy NPCs to get to the mouse, and the enemy NPCs leaving their pathway to get 
+   to the mouse. We decided not to add the enemy NPCs, leaving their pathway to get the mouse. 
+        Throughout the process, I learned that I need to speak up more when I have issues and 
+   don’t understand what my partner is trying to get at. I also learned that planning out the 
+   logic before coding is very important. Although we did spend time planning the logic behind 
+   some things, I wish we had spent more time doing this with all of the code. The hardest part 
+   of the project was trying to understand exactly what I was supposed to be doing. Sometimes 
+   I didn’t understand and ended up doing things incorrectly. It was also hard to figure out the 
+   logic behind the Mouse NPC. 
+        If I were to do this again, I would spend more time planning out everything for the 
+   beginning and making it clearer. Presenting our game in class made me realize that we 
+   should’ve made the mouse and player spawning points random to add more variety to the game. 
+   I also wish we had used more GUIs to make our game interesting. Overall, I believe Taylor and 
+   I worked pretty well. I learned a lot working with him. Miscommunication was challenging because 
+   sometimes I misunderstood what we were trying to do.
 
 ```
 

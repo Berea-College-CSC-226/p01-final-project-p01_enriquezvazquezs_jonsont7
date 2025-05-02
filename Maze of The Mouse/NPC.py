@@ -27,6 +27,7 @@ class NPC(pygame.sprite.Sprite):
         Represents the Good NPC in the game.
 
         :param screen_size: size of the window, for ensuring the NPC stays on screen
+        :param imgName: Selects the image file
         """
         print("Spawning NPC")
         self.screen_size = screen_size
