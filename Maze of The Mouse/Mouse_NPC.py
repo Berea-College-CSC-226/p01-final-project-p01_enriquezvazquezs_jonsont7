@@ -13,6 +13,10 @@ class Mouse(NPC):
     def __init__(self, screen_size, imgName, position = [0, 0]):
         """
         Represents the Mouse NPC in the game.
+
+        :param screen_size: Screen size, for keeping character on the screen
+        :param imgName: Selects the image file
+        :param position: NPC sprite starting point
         """
         super().__init__(screen_size, imgName)
         self.move_distance = 4
@@ -20,14 +24,20 @@ class Mouse(NPC):
 
     def movement(self, others):
         """
-        Moves the Mouse away from the closest cat.
+        Moves the Mouse away from the closest cat
+
+        :param others: The other cat NPC's
+        :return: None
         """
 
         self.moveAwayFromOther(self.get_closest_cat_position(others))
 
     def get_closest_cat_position(self, others):
         """
-        Finds the closest cat from a list of other sprites.
+        Finds the closest cat from a list of other sprites
+
+        :param others: The other cat NPC's
+        :return: Closest cats position
         """
         cat_positions = [(cat.rect.centerx, cat.rect.centery) for cat in others]
         min_distance = float('inf')
@@ -43,7 +53,11 @@ class Mouse(NPC):
 
     def calculation_cat(self, pos1, pos2):
         """
-        Calculates the Euclidean distance between two points.
+        Calculates the Euclidean distance between two points
+
+        :param pos1: First position
+        :param pos2: Second position
+        :return: Represents the distance between pos1 and pos2
         """
         a = pos1[0] - pos2[0]
         b = pos1[1] - pos2[1]
@@ -52,6 +66,12 @@ class Mouse(NPC):
 
 
     def moveAwayFromOther(self, other):
+        """
+        Moves the Mouse the opposite way of the cat
+
+        :param other: The other cat NPC's
+        :return: None
+        """
         selfPos = (self.rect.centerx, self.rect.centery)
 
         yDistance = selfPos[1] - other[1]

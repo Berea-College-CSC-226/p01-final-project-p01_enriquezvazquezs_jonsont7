@@ -65,9 +65,7 @@ class Game:
             [False, False, False, False, False, True, False, False, False, False, False, False, False, False, False,
              False]]
         self.maze = Maze.Maze(matrix)
-        #
-        # path_points = [(100, 100), (700, 100), (700, 500), (100, 500)]
-        # self.enemy = Enemy_NPC(self.size, path_points)
+
 
 
     def run(self):
@@ -102,7 +100,6 @@ class Game:
                 self.screen.blit(txt, (self.size[0] // 4, self.size[1] - 100))
             else:
 
-                #playerPosition = [self.tuna.rect.x, self.tuna.rect.y]
 
                 # Keep playing!
                 self.tuna.movement(pygame.key.get_pressed())
@@ -128,8 +125,9 @@ class Game:
     def checkBarrierCollision(self, sprite):
         """
         Doesn't allow sprites to pass throw barriers
+
         :param sprite: sprite to check
-        :return: none
+        :return: None
         """
         for boundary in self.maze.boundaries:
             if pygame.sprite.spritecollide(sprite, [boundary], False):
@@ -143,6 +141,12 @@ class Game:
                     sprite.rect.move_ip(0, -sprite.move_distance)
 
     def keepOnScreen(self, sprite):
+        """
+        Keeps everything on the screen
+
+        :param sprite: Sprite that you want to keep on the screen
+        :return: None
+        """
         if sprite.rect.top < 0:
             sprite.rect.move_ip(0, sprite.move_distance)
         if sprite.rect.bottom > self.size[1]:

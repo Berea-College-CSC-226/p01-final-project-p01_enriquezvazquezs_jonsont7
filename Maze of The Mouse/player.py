@@ -26,6 +26,7 @@ class Player(pygame.sprite.Sprite):
         Represents the player in the game.
 
         :param screen_size: Screen size, for keeping character on the screen
+        :param position = [0, 0]: NPC sprite starting point
         """
         super().__init__()
         self.screen_size = screen_size

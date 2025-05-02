@@ -7,6 +7,11 @@ import Boundary
 import game
 class GameTest(unittest.TestCase):
     def testBoundary(self):
+        """
+        Tests if the boundaries appear on the screen
+
+        :return: None
+        """
         tGame = game.Game()
         boundaries = []
         boundaries.append(Boundary.Boundary([200, 200]))
@@ -14,6 +19,13 @@ class GameTest(unittest.TestCase):
         self.runTestGameBoundary(tGame, boundaries)
 
     def runTestGameBoundary(self, tGame, boundaries):
+        """
+        Draws the boundary on the screen
+
+        :param tGame:
+        :param boundaries: list of boundaries to draw
+        :return:None
+        """
         while True:
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
@@ -24,6 +36,11 @@ class GameTest(unittest.TestCase):
             tGame.clock.tick(24)
 
     def testMaze(self):
+        """
+        Tests maze drawn on the matrix
+
+        :return: None
+        """
         tGame = game.Game()
         matrix = [[False, False, False, False, False, False, False, True, False, False, False, False, False, False, False, False],
                   [False, False, False, False, False, False, False, True, False, False, False, False, False, False, False, False],
@@ -50,6 +67,11 @@ class GameTest(unittest.TestCase):
 
 
 def main():
+    """
+    Running the tests
+
+    :return:None
+    """
     tester = GameTest()
     tester.testMaze()
     #tester.testBoundary()

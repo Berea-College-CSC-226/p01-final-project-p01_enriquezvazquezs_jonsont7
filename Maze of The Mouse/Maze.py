@@ -10,7 +10,8 @@ class Maze:
     def makeBoundaries(self):
         """
         Makes the boundaries of the maze
-        :return:
+
+        :return: None
         """
         xPos = 0
         yPos = 0
@@ -24,5 +25,11 @@ class Maze:
 
 
     def drawMaze(self, screen):
+        """
+        Displays boundaries in the Maze
+
+        :param screen: Screen size, for keeping character on the screen
+        :return: None
+        """
         for boundary in self.boundaries:
             screen.blit(boundary.surf, boundary.rect)

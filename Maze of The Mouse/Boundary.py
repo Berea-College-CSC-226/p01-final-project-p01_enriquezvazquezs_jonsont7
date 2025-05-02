@@ -2,6 +2,10 @@ import pygame
 
 class Boundary(pygame.sprite.Sprite):
     def __init__(self, position):
+        """
+        Represents a single cell in the maze wall
+        :param position: Pixel position of where the sprite is at
+        """
         super().__init__()
         self.position = position
         self.surf = pygame.image.load('images/BoundaryImage.png').convert_alpha()
