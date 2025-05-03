@@ -33,6 +33,16 @@ tuna, where instead of the game being a blank screen, the cat will need to escap
 
 [pygame.game -- pygame v2.6.0 documentation](https://www.pygame.org/docs/ref/draw.html)
 [ How do I change the size of my Sprite?](https://www.codesters.com/preview/778ed656278a4acd99e0619e8b1c3f63/?lang=en)
+https://www.w3schools.com/python/python_math.asp
+https://stackoverflow.com/questions/35104991/relative-cardinal-direction-of-two-coordinates?utm_source
+https://github.com/Rabbid76/PyGameExamplesAndAnswers/blob/master/documentation/pygame/pygame_move_towards_target.md?utm_source
+https://realpython.com/python-math-module/#hypotenuse-calculations
+https://www.pygame.org/docs/ref/math.html#pygame.math.Vector2.normalize
+https://stackoverflow.com/questions/55579764/pygame-how-to-find-the-nearest-sprite-in-an-array-and-lock-onto-it?utm_source
+https://blog.enterprisedna.co/python-infinity/
+https://www.w3schools.com/python/ref_math_inf.asp?utm_source
+https://www.w3resource.com/python-exercises/python-basic-exercise-40.php
+
 
 ---
 
